@@ -1,18 +1,19 @@
-
-import './App.css'
-
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home.jsx';
+import Footer from './components/Footer';
+import Header from './components/Header'; // Importar Header
+import './styles/global.css';
 function App() {
- 
   return (
-    <>
-     <h2>¡Página en construcción!</h2> 
-
-<p>¡Hola! Estamos trabajando duro para crear una experiencia web increíble para ti.</p>
-
-<p>En este momento, la página se encuentra en construcción, pero volveremos pronto con algo mejor que nunca.</p>
-      
-    </>
-  )
+    <BrowserRouter>
+      <div className="app">
+        <Header />  {/* Renderizar Header */}
+        <Home />
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
